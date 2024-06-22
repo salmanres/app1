@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import Login from './modules/auth/Login';
+import Register from './modules/auth/Register';
+import Errorpage from './modules/shared/Errorpage';
+import LandingPage from './modules/dashboard/LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='' element={<LandingPage/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='*' element={<Errorpage/>}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
