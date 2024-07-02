@@ -11,8 +11,6 @@ body
   font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   opacity: 1;
-  overflow-y: scroll; 
-  overflow: hidden;
 }
 
 a
@@ -35,10 +33,9 @@ li
 }
 #sidebar
 {
-  max-width: 264px;
-  min-width: 264px;
   background: var(--bs-dark);
   transition: all 0.35s ease-in-out;
+  height: 90.5vh;
 }
 .main
 {
@@ -59,7 +56,6 @@ li
 }
 .sidebar-logo a
 {
-  color:lightgoldenrodyellow;
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
@@ -85,7 +81,6 @@ li
 .sidebar-link
 {
   padding: .625rem 1.625rem;
-  color: #e9ecef;
   position: relative;
   display: block;
   font-size: 0.875rem;
@@ -140,3 +135,83 @@ li
   background-color: black;
   color: #e9ecef;
 }
+
+#sidebar-toggle
+{
+  font-size: 27px;
+  color: red;
+}
+.maincontainer {
+  padding: 0 0 0 0 !important;
+}
+.contentarea
+{
+  margin-top: 57px;
+}
+.mainsidebar
+{
+  min-height: 90.5vh;
+}
+.navlogo
+{
+  font-size: 30px;
+  color:#444f5a;
+  font-weight: 600;
+  font-family: 'Poppins';
+  text-decoration: none;
+}
+.navsearchbar
+{
+  outline: none !important;
+}
+.navsearchbar:focus
+{
+  outline: gray !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.searchicon
+{
+  font-size: 25px;
+  margin-bottom: 4px;
+  color: darkgray;
+}
+.searchbutton
+{
+  height: 37px;
+  outline: none !important;
+  border: 1px solid lightgray !important;
+}
+.sidebarmenu
+{
+  margin-left: -32px;
+}
+.sidebarmenu>li 
+{
+  padding: 10px;
+  border-bottom: 1px solid darkgray;
+  list-style-type: none;
+}
+.sidebarmenu>li a
+{
+  text-decoration: none;
+  font-family: 'Poppins';
+  color: #444f5a;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sidebarmenu>li:hover
+{
+  background-color:#e9ecef;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+.chartstable
+{
+  background-color: transparent ;
+  color: white;
+  width: 100%;
+}
+
+
