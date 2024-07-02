@@ -13,9 +13,9 @@ function LandingPage() {
         <Fragment>
             <div className='wrapper'>
                 <aside id="sidebar">
-                    <div className='h-100 p-1'>
+                    <div className=' p-1'>
                         <div className='sidebar-logo'>
-                            <Link to={"MainPage"}><FaListUl className='icond' /> DASHBOARD</Link>
+                            <Link to={"MainPage"}> DASHBOARD</Link>
                         </div>
 
                         {/* <!-- nav content --------------------> */}
@@ -28,7 +28,7 @@ function LandingPage() {
                 </aside>
                 <div className='main'>
                     <nav className='navbar navbar-expand px-3 border-bottom'>
-                        <button className='btn' id="sidebar-toggle" type='button' onClick={sideToggle}>
+                        <button className='btn' id="sidebar-toggle" type='button'>
                             <span className='navbar-toggler-icon'></span>
                         </button>
 
@@ -50,11 +50,10 @@ function LandingPage() {
                     <main className='content px-3 py-2'>
                         <div className='container-fluid'>
                             <div className='mb-3'>
-                                <h4>admin dashboard</h4>
+                                <Link to={"MainPage"}><h4>click here for main page</h4></Link>
                             </div>
                             <div className='row'>
                                 <div className='col-12'>
-salman
                                 </div>
                             </div>
                         </div>

@@ -18,32 +18,26 @@ function Validation() {
   return (
     <Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='container-fluid p-5'>
-          <div className='row'>
+        <div className='container-fluid p-5 rounded'>
+          <div className='row '>
             <div className='col-sm-6 col-12'>
-              <input type='text' className='form-control' placeholder='Name' {...register("name", { required: true })} />
-              {errors.name && <p className='text-danger'>name is required</p>}
+              <img className='h-100' src='https://img.freepik.com/free-photo/blue-office-stationery-set-with-laptop_23-2147843325.jpg' alt="register..." />
             </div>
             <div className='col-sm-6 col-12'>
-              <input type='email' className='form-control' placeholder='Email' {...register("email", { required: true })} />
+              <input type='text' className='form-control mt-4' placeholder='Full Name' {...register("name", { required: true })} />
+              {errors.name && <p className='text-danger '>full name is required</p>}
+              <input type='email' className='form-control mt-4' placeholder='Email ID' {...register("email", { required: true })} />
               {errors.email && <p className='text-danger'>email is required</p>}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-sm-6 col-12'>
-              <input type='password' className='form-control' placeholder='Password' {...register("password",{required:true})}/>
-              {errors.password && <p className='text-danger'>password is required</p>}
-            </div>
-            <div className='col-sm-6 col-12'>
-              <button className='btn btn-primary w-100'>REGISTER</button>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-sm-6 col-12'>
-
-            </div>
-            <div className='col-sm-6 col-12'>
-
+              <input type='number' className='form-control mt-4' placeholder='Mobile number' {...register("mobile", { required: true })} />
+              {errors.mobile && <p className='text-danger'>mobile number is required</p>}
+              <input type='password' className='form-control mt-4' placeholder='Password' {...register("password", { required: true })} />
+              {errors.password && <p className='text-danger mt-4'>password is required</p>}
+              <label className='form-label mt-2'>Date of Birth</label>
+              <input type='date' className='form-control ' {...register("dob", { required: true })} />
+              {errors.dob && <p className='text-danger mt-4'>dob is required</p>}
+              <input type='text' className='form-control mt-4' placeholder='Address' {...register("address", { required: true })} />
+              {errors.address && <p className='text-danger'>address is required</p>}
+              <button className='btn btn-secondary w-100 my-4'>REGISTER</button>
             </div>
           </div>
         </div>

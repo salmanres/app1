@@ -37,7 +37,7 @@ root.render(
           <Route path='NewsApi' element={<NewsApi/>} />
           <Route path='NewsApi/NewsDetails/:id' element={<NewsDetails/>} />
           <Route path='Charts' element={<Charts/>} />
-          <Route path='RegisterPage' element={<RegisterPage/>} />
+          <Route path='RegisterPage' element={<Validation/>} />
           <Route path='Validation' element={<Validation/>} />
         </Route>
 

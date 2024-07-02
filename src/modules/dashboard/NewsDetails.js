@@ -6,29 +6,22 @@ import { Link, useParams } from 'react-router-dom';
 
 function NewsDetails() {
     const { title } = useParams();
-    const [newsData, setNewsData] = useState([]);
+    const [newsData, setNewsData] = useState();
 
     const getNewsData = () => {
-        axios.get("https://newsapi.org/v2/everything?q=tesla&from=2024-06-01&sortBy=publishedAt&apiKey=0556e36ff1f846618076fad808e81b7c")
+        axios.get("https://newsapi.org/v2/everything?q=tesla&from=2024-06-02&sortBy=publishedAt&apiKey=0556e36ff1f846618076fad808e81b7c")
             .then((response) => {
                 setNewsData(response.data.articles);
+                console.log(newsData);
             })
-            .catch((error) => {
-                console.error("Error fetching news data:", error);
-            });
     }
 
     useEffect(() => {
         getNewsData();
     }, [])
 
-    console.log(newsData);
-    const article = newsData.find((event) => event.title === title);
-    console.log(article);
 
-    if (!article) {
-        return <div className='m-5 text-danger'><h2>no data found...</h2></div>;
-    }
+    const newsDetails = newsData.find((article)=> article.title === title);
 
 
     return (
@@ -36,6 +29,7 @@ function NewsDetails() {
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-sm-12 col-12'>
+                       <h4>{newsDetails.title}</h4>                        
                         {/* <div class="card">
                             <img src={article.urlToImage} class="card-img-top" alt="..." />
                             <div class="card-body">
