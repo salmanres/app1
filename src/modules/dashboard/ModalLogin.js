@@ -36,7 +36,7 @@ function LoginModal({ show, handleClose }) {
 
     return (
         <Modal show={show} onHide={handleClose}>
-            <div className='px-5 shadow rounded'>
+            <div className='px-3 shadow rounded'>
                 <Modal.Header closeButton>
                     <Modal.Title>LOGIN HERE</Modal.Title>
                 </Modal.Header>
