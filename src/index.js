@@ -19,6 +19,8 @@ import Charts from './modules/dashboard/Charts';
 import RegisterPage from './modules/auth/RegisterPage';
 import Validation from './modules/dashboard/Validation';
 import NewsDetails from './modules/dashboard/NewsDetails';
+import LazyLoading from './modules/dashboard/LazyLoading';
+import MovieDetails from './modules/dashboard/MovieDetails';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,6 +33,7 @@ root.render(
         <Route path='*' element={<Errorpage />} />
         <Route path='MainPage' element={<MainPage />}>
           <Route path='HomePage' element={<HomePage/>} />
+          <Route path='HomePage/MovieDetails/:id' element={<MovieDetails/>} />
           <Route path='HomePage2' element={<HomePage2/>} />
           <Route path='Axios' element={<Axios/>} />
           <Route path='Axios/UserDetails/:id' element={<UserDetails/>} />
@@ -39,6 +42,7 @@ root.render(
           <Route path='Charts' element={<Charts/>} />
           <Route path='RegisterPage' element={<Validation/>} />
           <Route path='Validation' element={<Validation/>} />
+          <Route path='LazyLoading' element={<LazyLoading/>} />
         </Route>
 
       </Routes>

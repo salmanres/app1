@@ -18,10 +18,10 @@ function Validation() {
   return (
     <Fragment>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='container-fluid p-5 rounded'>
+        <div className='container-fluid p-5 rounded overflow-hidden'>
           <div className='row '>
             <div className='col-sm-6 col-12'>
-              <img className='h-100' src='https://img.freepik.com/free-photo/blue-office-stationery-set-with-laptop_23-2147843325.jpg' alt="register..." />
+              <img className='h-100 rounded' src='https://img.freepik.com/free-photo/blue-office-stationery-set-with-laptop_23-2147843325.jpg' alt="register..." />
             </div>
             <div className='col-sm-6 col-12'>
               <input type='text' className='form-control mt-4' placeholder='Full Name' {...register("name", { required: true })} />

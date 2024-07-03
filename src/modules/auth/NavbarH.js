@@ -36,8 +36,8 @@ function NavbarH() {
                 <div className='col-sm-3 col-12 d-flex align-items-center justify-content-center'>
                 </div>
                 <div className='col-sm-2 col-12 d-flex align-items-center justify-content-center'>
-                  <button type="button" class="btn btn-outline-danger me-2" onClick={openModal} >LOGIN</button>
-                  <Link to={'RegisterPage'}type="button" class="btn btn-outline-danger">SIGNUP</Link>
+                  <button type="button" class="btn btn-outline-secondary me-2" onClick={openModal} >LOGIN</button>
+                  <Link to={'RegisterPage'}type="button" class="btn btn-outline-secondary">SIGNUP</Link>
                 </div>
               </div>
             </div>

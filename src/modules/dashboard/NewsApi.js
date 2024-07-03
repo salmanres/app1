@@ -35,7 +35,7 @@ function NewsApi() {
                                     <div className="card-body">
                                         <h5 className="card-title">{article.title}</h5>
                                         <p className="card-text">{article.description}</p>
-                                        <Link to={`NewsDetails/` + article.title} className="btn btn-primary">read more...</Link>
+                                        <Link to={`NewsDetails/` + article.title} className="btn btn-secondary">read more...</Link>
                                     </div>
                                 </div>
                             </div>

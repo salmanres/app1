@@ -41,22 +41,22 @@ function LoginModal({ show, handleClose }) {
                     <Modal.Title>LOGIN HERE</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" placeholder='Email' onChange={(event) => setUserEmail(event.target.value)} />
+                    <div className="mb-3">
+                        <input type="email" className="form-control" placeholder='Email' onChange={(event) => setUserEmail(event.target.value)} />
                     </div>
-                    <div class="mb-3">
-                        <input type="password" class="form-control" placeholder='Password' onChange={(event) => setUserPassword(event.target.value)} />
+                    <div className="mb-3">
+                        <input type="password" className="form-control" placeholder='Password' onChange={(event) => setUserPassword(event.target.value)} />
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" onChange={(event) => setrememberMe(event.target.value)} />
+                    <div className="mb-3 form-check">
+                        <input type="checkbox" className="form-check-input mt-1" id="exampleCheck1" onChange={(event) => setrememberMe(event.target.value)} />
                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
-                    <button type="submit" className="btn btn-primary px-5" onClick={loginHandle}>LOGIN</button>
+                    <button type="submit" className="btn btn-secondary px-5" onClick={loginHandle}>LOGIN</button>
                     {loginError && <p className='text-danger'>{loginError}</p>}
 
                 </Modal.Body>
                 <Modal.Footer>
-                    <label for="exampleInputPassword1" class="form-label">Don't have an account?</label>
+                    <label for="exampleInputPassword1" className="form-label">Don't have an account?</label>
                     <Link variant="info">register here</Link>
                 </Modal.Footer>
             </div>

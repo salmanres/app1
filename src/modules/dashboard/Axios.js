@@ -21,9 +21,13 @@ function Axios() {
         <Fragment>
             <div className='container-fluid'>
                 <div className='row'>
+                    <div className='col-sm-12 col-12 mt-5 mb-2'>
+                        <h5 className='catbar'>USER LIST</h5>
+                    </div>
+                </div>
+                <div className='row'>
                     <div className='col-sm-12 col-12'>
-                        <table class="table caption-top">
-                            <caption>List of users</caption>
+                        <table class="table caption-top tabled">
                             <thead>
                                 <tr>
                                     <th scope="col">SR NO</th>
@@ -44,8 +48,8 @@ function Axios() {
                                             <td>{data.phone}</td>
                                             <td>{data.address.city}</td>
                                             <td>
-                                                <Link to={`UserDetails/`+data.id} className='btn btn-sm btn-primary'>VIEW</Link>
-                                                <button className='btn btn-sm btn-info'>EDIT</button>
+                                                <Link to={`UserDetails/` + data.id} className='btn btn-sm btn-secondary'>VIEW</Link>
+                                                <button className='btn btn-sm btn-warning mx-2'>EDIT</button>
                                                 <button className='btn btn-sm btn-danger'>Delete</button>
                                             </td>
                                         </tr>
