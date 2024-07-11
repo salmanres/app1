@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -21,32 +21,46 @@ import Validation from './modules/dashboard/Validation';
 import NewsDetails from './modules/dashboard/NewsDetails';
 import LazyLoading from './modules/dashboard/LazyLoading';
 import MovieDetails from './modules/dashboard/MovieDetails';
+import ReduxPage from './modules/dashboard/redux/ReduxPage.js';
+import { Provider } from 'react-redux';
+import { appStore } from './modules/dashboard/redux/store.js';
+import FoodCart from './modules/dashboard/FoodCart.js';
+import Filter from './modules/dashboard/Filter.js';
+import VinayakAssociates from './modules/dashboard/VinayakAssociates.js';
+import VehicleDetails from './modules/dashboard/VehicleDetails.js';
 
+const lazyLoadingPage = lazy(() => import("./modules/dashboard/LazyLoading.js"))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='' element={<LandingPage />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='*' element={<Errorpage />} />
-        <Route path='MainPage' element={<MainPage />}>
-          <Route path='HomePage' element={<HomePage/>} />
-          <Route path='HomePage/MovieDetails/:id' element={<MovieDetails/>} />
-          <Route path='HomePage2' element={<HomePage2/>} />
-          <Route path='Axios' element={<Axios/>} />
-          <Route path='Axios/UserDetails/:id' element={<UserDetails/>} />
-          <Route path='NewsApi' element={<NewsApi/>} />
-          <Route path='NewsApi/NewsDetails/:id' element={<NewsDetails/>} />
-          <Route path='Charts' element={<Charts/>} />
-          <Route path='RegisterPage' element={<Validation/>} />
-          <Route path='Validation' element={<Validation/>} />
-          <Route path='LazyLoading' element={<LazyLoading/>} />
-        </Route>
-
-      </Routes>
-    </BrowserRouter>
+    <Provider store={appStore}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='' element={<LandingPage />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='*' element={<Errorpage />} />
+          <Route path='MainPage' element={<MainPage />}>
+            <Route path='HomePage' element={<HomePage />} />
+            <Route path='HomePage/MovieDetails/:id' element={<MovieDetails />} />
+            <Route path='HomePage2' element={<HomePage2 />} />
+            <Route path='Axios' element={<Axios />} />
+            <Route path='Axios/UserDetails/:id' element={<UserDetails />} />
+            <Route path='NewsApi' element={<NewsApi />} />
+            <Route path='NewsApi/NewsDetails/:id' element={<NewsDetails />} />
+            <Route path='Charts' element={<Charts />} />
+            <Route path='RegisterPage' element={<Validation />} />
+            <Route path='Validation' element={<Validation />} />
+            <Route path='LazyLoading' element={<Suspense fallback={<h1 className='Loading'>Loading Data...</h1>}><LazyLoading /></Suspense>} />
+            <Route path='ReduxPage' element={<ReduxPage />} />
+            <Route path='FoodCart' element={<FoodCart />} />
+            <Route path='Filter' element={<Filter />} />
+            <Route path='VinayakAssociates' element={<VinayakAssociates />} />
+            <Route path='VinayakAssociates/VehicleDetails/:id' element={<VehicleDetails />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

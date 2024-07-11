@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 var mydata = JSON.parse(localStorage.getItem("loggedInUserData")) || [];
 const date = new Date();
 
 function LoginModal({ show, handleClose }) {
+
+    const navigate = useNavigate();
 
     const [isLoggedIn, setIsLoggedIn] = useState("true");
     const [userEmail, setUserEmail] = useState("");
@@ -19,16 +22,17 @@ function LoginModal({ show, handleClose }) {
         const userMatch = storedUserData.find((d) => d.email === userEmail && d.password === userPassword);
 
         if (userMatch) {
-            alert("Login successful");
             const newData = {
                 name: userMatch.name,
-                email: userMatch.email, 
+                email: userMatch.email,
                 dateTime: date.toLocaleString(),
             }
-
+            
             mydata.push(newData);
             localStorage.setItem("loggedInUserData", JSON.stringify(mydata));
-            
+            navigate("/MainPage/HomePage");
+            handleClose();
+
         } else {
             setLoginError("invalid username/password");
         }
@@ -53,7 +57,6 @@ function LoginModal({ show, handleClose }) {
                     </div>
                     <button type="submit" className="btn btn-secondary px-5" onClick={loginHandle}>LOGIN</button>
                     {loginError && <p className='text-danger'>{loginError}</p>}
-
                 </Modal.Body>
                 <Modal.Footer>
                     <label for="exampleInputPassword1" className="form-label">Don't have an account?</label>
@@ -64,7 +67,4 @@ function LoginModal({ show, handleClose }) {
     );
 }
 
-
 export default LoginModal;
-
-

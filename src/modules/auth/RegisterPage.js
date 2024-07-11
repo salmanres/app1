@@ -44,13 +44,13 @@ function RegisterPage() {
 
                                 <div className='col-lg-6 col-12'>
                                     <label className='form-label'>Gender</label><br />
-                                    <div class="form-check form-check-inline mt-1">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" value="male" />
-                                        <label class="form-check-label">Male</label>
+                                    <div className="form-check form-check-inline mt-1">
+                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" value="male" />
+                                        <label className="form-check-label">Male</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" value="female" />
-                                        <label class="form-check-label">Female</label>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" value="female" />
+                                        <label className="form-check-label">Female</label>
                                     </div>
                                 </div>
                             </div>

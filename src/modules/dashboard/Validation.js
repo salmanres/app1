@@ -1,10 +1,24 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { useForm, SubmitHandler } from "react-hook-form"
 import { json } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import LoginModal from './ModalLogin';
 
 const data = JSON.parse(localStorage.getItem("userData")) || [];
 
 function Validation() {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const navigate = useNavigate();
 
   const { register, handleSubmit, watch, formState: { errors }, } = useForm()
   const onSubmit = (event) => {
@@ -12,6 +26,7 @@ function Validation() {
     console.log(data);
     localStorage.setItem("userData", JSON.stringify(data));
     alert("registration successful");
+    openModal();
   }
 
 
@@ -42,6 +57,7 @@ function Validation() {
           </div>
         </div>
       </form>
+      <LoginModal show={showModal} handleClose={closeModal} />
     </Fragment>
   )
 }

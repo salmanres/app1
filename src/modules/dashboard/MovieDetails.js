@@ -32,12 +32,12 @@ function MovieDetails() {
                         <div className="card-body">
                             <h5 className="card-title">{movieData.title}</h5>
                             <p className="card-text">{movieData.overview}</p>
-                            <p className="card-text">Release date : {movieData.release_date}</p>
-                            <p className="card-text">Original language : {movieData.original_language}</p>
-                            <p className="card-text">Budget / Revenue : ${movieData.budget} / ${movieData.revenue}</p>
-                            <p className="card-text">Runtime : {movieData.runtime}</p>
-                            <p className="card-text">Popularity: {movieData.popularity}</p>
-                            <p className="card-text">IMDB ID : {movieData.imdb_id}</p>
+                            <p className="card-text"><b>Release date : </b>{movieData.release_date}</p>
+                            <p className="card-text"><b>Original language :</b> {movieData.original_language}</p>
+                            <p className="card-text"><b>Budget / Revenue :</b> ${movieData.budget} / ${movieData.revenue}</p>
+                            <p className="card-text"><b>Runtime :</b> {movieData.runtime} min</p>
+                            <p className="card-text"><b>Popularity:</b> {movieData.popularity} points</p>
+                            <p className="card-text"><b>IMDB ID :</b> {movieData.imdb_id}</p>
                             <br/>
                             <br/>
                             <Link to={"/MainPage/HomePage"} className='backbutton'><IoMdArrowRoundBack className='backicon'/> </Link>

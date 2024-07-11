@@ -9,7 +9,7 @@ function NewsDetails() {
     const [newsData, setNewsData] = useState();
 
     const getNewsData = () => {
-        axios.get("https://newsapi.org/v2/everything?q=tesla&from=2024-06-03&sortBy=publishedAt&apiKey=0556e36ff1f846618076fad808e81b7c")
+        axios.get("https://newsapi.org/v2/everything?q=tesla&from=2024-06-04&sortBy=publishedAt&apiKey=0556e36ff1f846618076fad808e81b7c")
             .then((response) => {
                 setNewsData(response.data.articles);
                 console.log(newsData);

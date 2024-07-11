@@ -11,6 +11,7 @@ import {
     PieChart, Pie, Sector, Cell, ResponsiveContainer
 } from "recharts";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const colors = ['orange', 'yellow', 'red', 'white', 'orange', 'yellow'];
@@ -146,6 +147,8 @@ function Charts() {
 
     const [userData, setUserData] = useState([]);
 
+    const count = useSelector((state)=>state.counter.value)
+
     const getUserData = () => {
         axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
             setUserData(response.data);
@@ -174,7 +177,7 @@ function Charts() {
                         <div class="card text-bg-secondary ">
                             <div class="card-header my-0">-2%</div>
                             <div class="card-body pt-2 text-center">
-                                <h1 class="card-title">17</h1>
+                                <h1 class="card-title">{count}</h1>
                                 <p class="card-text">Closed Today</p>
                             </div>
                         </div>

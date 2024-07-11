@@ -2,13 +2,8 @@ import React, { Fragment } from 'react'
 import HomePage from './HomePage';
 import NavbarH from '../auth/NavbarH';
 import { Link, Outlet } from 'react-router-dom'
-import { GrYoga } from "react-icons/gr";
-import { IoFitnessOutline } from "react-icons/io5";
-import { IoMdFitness } from "react-icons/io";
-import { MdSportsGymnastics } from "react-icons/md";
+import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { MdOutlineDownloading } from "react-icons/md";
-import { CiMedicalCross } from "react-icons/ci";
-import { IoGitNetworkOutline } from "react-icons/io5";
 import { VscListFilter } from "react-icons/vsc";
 import { RiGuideLine } from "react-icons/ri";
 import { MdMovieEdit } from "react-icons/md";
@@ -17,12 +12,7 @@ import { CiViewTable } from "react-icons/ci";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { FaRegChartBar } from "react-icons/fa";
 import { RiPassValidLine } from "react-icons/ri";
-
-
-
-
-
-
+import { TbBrandRedux } from "react-icons/tb";
 
 
 function MainPage() {
@@ -46,9 +36,10 @@ function MainPage() {
               <li><Link to={"Charts"}><FaRegChartBar className='iconclass' /> CHARTS</Link></li>
               <li><Link to={"Validation"}><RiPassValidLine className='iconclass' /> VALIDATION</Link></li>
               <li><Link to={"LazyLoading"}><MdOutlineDownloading className='iconclass'/> LAZY LOADING</Link></li>
-              <li><Link to={""}><IoGitNetworkOutline className='iconclass'/> THEME CHANGE</Link></li>
-              <li><Link to={""}><VscListFilter className='iconclass'/> FILTER & SEARCH </Link></li>
-              <li><Link to={""}><RiGuideLine  className='iconclass'/> COMMUNITY</Link></li>
+              <li><Link to={"ReduxPage"}><TbBrandRedux className='iconclass'/> REDUX PAGE</Link></li>
+              <li><Link to={"FoodCart"}><PiShoppingCartSimpleBold className='iconclass'/> FOOD CART</Link></li>
+              <li><Link to={"Filter"}><VscListFilter className='iconclass'/> FILTER & SEARCH </Link></li>
+              <li><Link to={"VinayakAssociates"}><RiGuideLine  className='iconclass'/> VINAYAK ASSOC</Link></li>
             </ul>
           </div>
           <div className='col-sm-10 col-10 bg-light '>

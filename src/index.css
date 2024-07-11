@@ -266,3 +266,13 @@ li
   margin-bottom: 2px;
   margin-right: 2px;
 }
+
+.foodcartimg
+{
+  height: 180px;
+}
+
+.starfontcol
+{
+  color: red !important;
+}
