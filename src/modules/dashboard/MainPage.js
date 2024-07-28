@@ -39,7 +39,7 @@ function MainPage() {
               <li><Link to={"ReduxPage"}><TbBrandRedux className='iconclass'/> REDUX PAGE</Link></li>
               <li><Link to={"FoodCart"}><PiShoppingCartSimpleBold className='iconclass'/> FOOD CART</Link></li>
               <li><Link to={"Filter"}><VscListFilter className='iconclass'/> FILTER & SEARCH </Link></li>
-              <li><Link to={"VinayakAssociates"}><RiGuideLine  className='iconclass'/> VINAYAK ASSOC</Link></li>
+              <li><Link to={"VinayakAssociates"}><RiGuideLine  className='iconclass'/> RTO DATA</Link></li>
             </ul>
           </div>
           <div className='col-sm-10 col-10 bg-light '>

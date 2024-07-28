@@ -29,7 +29,7 @@ function VinayakAssociates() {
             <div className='container-fluid mt-5'>
                 <div className='row d-flex justify-content-center'>
                     <div className='col-sm-5 col-12 text-center'>
-                        <h5 className='navlogo'>VINAYAKA</h5>
+                        <h5 className='navlogo'>ENTER VEHICLE NUMBER</h5>
                         <input type='text' className='form-control' placeholder='search here...' onChange={searchHandler} />
                         {data.length > 0 ? (
                             data.map((event) => {
@@ -37,7 +37,7 @@ function VinayakAssociates() {
                                     <Link to={`VehicleDetails/` + event.id} className='form-control navlogo'>{event.registration}</Link>
                                 )
                             })
-                        ) : <div> no data </div>}
+                        ) : <div className='mt-2'> enter atleast 3 digits</div>}
                     </div>
                 </div>
             </div>
